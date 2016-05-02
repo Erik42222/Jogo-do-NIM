@@ -6,9 +6,11 @@ int main(void)
     int tab,l1,l2,l3;
     printf("Qual a situação do tabuleiro\n");
     scanf("%d",&tab);
+    
     l1 = tab/100;
     l2 = (tab - l1 * 100)/10;
-    l3 = tab - l1 * 100 - l2 * 10;
+    l3 = tab - l1 * 100 - l2 * 10;//Entrada de dados
+    
     if (tab == 110 || tab == 101)
         l1 = 0;
     else
@@ -71,7 +73,7 @@ int main(void)
                                                             {
 
                                                                 if (tab == 102 || tab == 12)
-                                                                    l3 = 0;
+                                                                    l3 = 0;//Fim dos casos especiais
                                                                 else
                                                                 {
                                                                     if (((l1-1)^l2^l3) == 0)
@@ -110,7 +112,8 @@ int main(void)
             }
         }
     }
-    printf("%d%d%d\n",l1,l2,l3);
+    printf("%d%d%d\n",l1,l2,l3);//Saída de dados
+    
     if ((l1 == 1 && l2 == 0 && l3 == 0) || (l1 == 0 && l2 == 1 && l3 == 0) || (l1==0 && l2 == 0 && l3 == 1))
         printf("GG WP\n");
     return 0;
